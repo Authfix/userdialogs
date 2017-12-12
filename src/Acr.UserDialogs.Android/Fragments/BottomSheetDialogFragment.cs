@@ -63,7 +63,7 @@ namespace Acr.UserDialogs.Fragments
                 layout.AddView(this.CreateDivider());
                 layout.AddView(this.CreateRow(config.Destructive, true));
             }
-            if (config.Cancel != null)
+            if (config.Cancel != null && config.DisplayCancel)
             {
                 if (config.Destructive == null)
                     layout.AddView(this.CreateDivider());
