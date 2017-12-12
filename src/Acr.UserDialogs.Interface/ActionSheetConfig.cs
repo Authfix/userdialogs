@@ -19,6 +19,15 @@ namespace Acr.UserDialogs
         public string Title { get; set; }
         public string Message { get; set; }
         public ActionSheetOption Cancel { get; set; }
+
+        /// <summary>
+        /// Gets or sets a value indicating whether we need to display cancel action or not
+        /// </summary>
+        /// <value>
+        ///   <c>true</c> if the cancel action must be displayed; otherwise, <c>false</c>.
+        /// </value>
+        public bool DisplayCancel { get; set; } = true; // True for backward compatibility
+
         public ActionSheetOption Destructive { get; set; }
         public IList<ActionSheetOption> Options { get; set; } = new List<ActionSheetOption>();
         public int? AndroidStyleId { get; set; } = DefaultAndroidStyleId;
